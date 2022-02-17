@@ -1,1 +1,18 @@
-<h1>ejs hello</h1>
+<%- include('header'); %>
+<div class="form">
+    <div id="tablo" style="width: 200px; height: 200px; padding: 40px;" id="weather">
+        <p id="description"></p>
+        <h1 id="temp"></h1>
+        <p id="location"></p>
+    </div>
+
+    <div>
+        <form id="change-city">
+            <label  for="city-name">City</label>
+            <input type="text"  id="city-name">
+            <input class="btn btn-primary" type="submit" value="Save changes">
+        </form>
+    </div>
+    <br>
+</div>
+<%- include('footer'); %>
