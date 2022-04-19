@@ -1,16 +1,21 @@
+
 <%- include('header'); %>
 <div class="form">
-    <div id="tablo" style="width: 200px; height: 200px; padding: 40px;" id="weather">
-        <p id="description"></p>
-        <h1 id="temp"></h1>
-        <p id="location"></p>
-    </div>
+    <!--<div id="tablo" style="width: 200px; height: 200px; padding: 40px;" id="weather"></div>-->
+        <div class="weather">
+            <div class="location"><%= city %></div>
+            <div class="temp"><%= temp %></div>
+            <div class="description"><%= description %></div>
+        </div>
+
 
     <div>
         <form id="change-city">
             <label  for="city-name">City</label>
             <input type="text"  id="city-name">
             <input class="btn btn-primary" type="submit" value="Save changes">
+
+
         </form>
     </div>
     <br>
