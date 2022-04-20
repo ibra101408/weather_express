@@ -2,6 +2,7 @@
 <%- include('header'); %>
 <div class="form">
     <!--<div id="tablo" style="width: 200px; height: 200px; padding: 40px;" id="weather"></div>-->
+    <% if (error === null){ %>
         <div class="weather">
             <div class="location"><%= city %></div>
             <div class="temp"><%= temp %></div>
@@ -14,9 +15,13 @@
             <label  for="city-name">City</label>
             <input type="text"  id="city-name" name="cityname">
             <input class="btn btn-primary" type="submit" value="Save changes">
-
-
         </form>
+        <% } else { %>
+        <div role="alert">
+            <%= error %>
+        </div>
+        <a href="/" role="button">Try again</a>
+        <% } %>
     </div>
     <br>
 </div>
